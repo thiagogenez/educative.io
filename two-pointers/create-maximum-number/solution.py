@@ -3,16 +3,35 @@ from typing import List
 
 def max_subsequence(nums: List[int], k: int) -> List[int]:
     """
-    Build the maximum subsequence of length k using a greedy "upgrade" strategy.
-    Instead of converting sequences to integers, we use Python's built-in
-    lexicographical list comparison (cand > best).
+    Return the lexicographically largest subsequence of length `k` from `nums`,
+    preserving the original order of digits.
 
-    The algorithm:
-      1. Start with the first k digits.
-      2. For each later digit x:
-            Try replacing each position in the current subsequence.
-            If the new sequence is lexicographically larger, adopt it.
-      3. Return the best subsequence found.
+    This implementation uses a greedy "upgrade" strategy rather than the
+    classical monotonic-stack approach.
+
+    Algorithm overview:
+        1. Initialize the subsequence using the first `k` digits of `nums`.
+        2. For each subsequent digit `x` in nums[k:]:
+            - Consider all possible subsequences obtained by removing one
+                element from the current subsequence and appending `x`.
+            - Among those `k` candidates, keep only the lexicographically
+                largest sequence.
+        3. After processing all remaining digits, the accumulated subsequence
+        represents the maximum achievable lexicographical value of length `k`.
+
+
+    Time complexity:
+        O((n - k) * k), since each of the (n - k) remaining digits generates
+        up to `k` candidate sequences for comparison.
+
+    Args:
+        nums : List[int]
+            The source sequence of digits.
+        k : int
+            Desired length of the output subsequence.
+
+    Returns:
+        List[int] : The lexicographically largest subsequence of length `k`.
     """
     # Edge cases
     if k <= 0:
