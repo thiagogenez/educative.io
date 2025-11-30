@@ -2,13 +2,11 @@
 
 ## 📝 Problem Statement
 
-You are given two integer arrays **`nums1`** and **`nums2`**, of lengths `m` and `n`.   Each array represents the **digits of a number** (most significant digit first).
-
-You are also given an integer **`k`**.
+You are given two integer arrays **`nums1`** and **`nums2`**, of lengths `m` and `n`.   Each array represents the **digits of a number** (most significant digit first). You are also given an integer **`k`**.
 
 Your task is to **create the largest possible number of length `k`**, using digits from both arrays, while preserving the **relative order** of digits taken from the same array.
 
-You may interleave digits from the two arrays in any way — but you **cannot reorder** digits *within* the original arrays.*
+You may interleave digits from the two arrays in any way — but you **cannot reorder** digits *within* the original arrays.
 
 Your function must return the final number as a **list of digits**.
 
