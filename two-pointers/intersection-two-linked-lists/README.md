@@ -9,7 +9,7 @@ If an intersection exists, return the **node where the intersection begins**.   
 > ⚠️ **Important:**  
 > Two linked lists intersect **only if they share the exact same node in memory**. Having equal values (`node.val`) does **not** mean they intersect.
 
----
+
 
 ## 💡 Example
 
@@ -21,7 +21,7 @@ List B:   3 → 4 ┘
 
 Both lists share node **8**, so the intersection begins at the node with value `8`.
 
----
+
 
 ## 📚 Constraints
 
@@ -32,7 +32,7 @@ Both lists share node **8**, so the intersection begins at the node with value `
 - Lists may be of **different lengths**
 - Intersection occurs only if the two lists share **the same memory reference**
 
----
+
 
 ## 🚀 Approach (Two-Pointer Switching Technique)
 
@@ -57,7 +57,7 @@ len(A) + len(B)
 
 Thus, they align regardless of the initial length difference.
 
----
+
 
 ## ⏱ Time & Space Complexity
 
